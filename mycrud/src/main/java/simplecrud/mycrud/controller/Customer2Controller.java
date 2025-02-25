@@ -59,8 +59,8 @@ public class Customer2Controller {
 		System.out.println("data coming from the view" + customer);
 		Customer updatedCustomer = customerService.getCustomerById(id);
 		updatedCustomer.setUsername(customer.getUsername());
-		updatedCustomer.setUsername(customer.getEmail());
-		updatedCustomer.setUsername(customer.getPlaceOfResidence());
+		updatedCustomer.setEmail(customer.getEmail());
+		updatedCustomer.setPlaceOfResidence(customer.getPlaceOfResidence());
 		System.out.println(updatedCustomer);
 		customerService.updateCustomer(updatedCustomer);
 		return "newchanges";
